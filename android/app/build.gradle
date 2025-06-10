@@ -2,6 +2,13 @@ apply plugin: "com.android.application"
 apply plugin: "org.jetbrains.kotlin.android"
 apply plugin: "com.facebook.react"
 
+project.ext.envConfigFiles = [
+   production: ".env.production",
+   uat: ".env.uat",
+   development: ".env.development"
+]
+apply from: project(':react-native-config').projectDir.getPath() + "/dotenv.gradle"
+
 /**
  * This is the configuration block to customize your React Native Android app.
  * By default you don't need to apply any configuration, just uncomment the lines you need.
@@ -76,6 +83,30 @@ android {
     ndkVersion rootProject.ext.ndkVersion
     buildToolsVersion rootProject.ext.buildToolsVersion
     compileSdk rootProject.ext.compileSdkVersion
+
+    flavorDimensions "default"
+    productFlavors {
+        dev {
+            dimension "default"
+            applicationIdSuffix ".dev"
+            versionNameSuffix "-dev"
+            resValue "string", "app_name", "Dev StarterKit"
+            buildConfigField "String", "ENVIRONMENT", "\"development\""
+        }
+        uat {
+            dimension "default"
+            applicationIdSuffix ".uat"
+            versionNameSuffix "-uat"
+            resValue "string", "app_name", "UAT StarterKit"
+            buildConfigField "String", "ENVIRONMENT", "\"uat\""
+        }
+        prod {
+            dimension "default"
+            // No suffix for production
+            resValue "string", "app_name", "StarterKit"
+            buildConfigField "String", "ENVIRONMENT", "\"production\""
+        }
+    }
 
     namespace "com.starterkit"
     defaultConfig {
