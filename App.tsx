@@ -18,6 +18,7 @@ import {
 import Config from 'react-native-config';
 
 function App(): React.JSX.Element {
+  console.log('Config object:', Config.ENV);
   return (
     <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
       <Text>Environment: {Config.ENV}</Text>
