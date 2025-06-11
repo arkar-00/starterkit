@@ -34,7 +34,7 @@ android {
         applicationId "com.starterkit"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
-        versionCode 1
+        versionCode 7
         versionName "1.0"
         resValue "string", "build_config_package", "com.starterkit"
     }
@@ -60,24 +60,24 @@ android {
         }
     }
 
-    flavorDimensions "default"
+    flavorDimensions "env"
     productFlavors {
         dev {
-            dimension "default"
+            dimension "env"
             applicationIdSuffix ".dev"
             versionNameSuffix "-dev"
             resValue "string", "app_name", "StarterKit DEV"
             buildConfigField "String", "ENV", "\"development\""
         }
         uat {
-            dimension "default"
+            dimension "env"
             applicationIdSuffix ".uat"
             versionNameSuffix "-uat"
             resValue "string", "app_name", "StarterKit UAT"
             buildConfigField "String", "ENV", "\"uat\""
         }
         prod {
-            dimension "default"
+            dimension "env"
             resValue "string", "app_name", "StarterKit"
             buildConfigField "String", "ENV", "\"production\""
         }

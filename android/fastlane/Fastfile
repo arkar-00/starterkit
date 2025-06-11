@@ -1,16 +1,9 @@
 # This file contains the fastlane.tools configuration
-# You can find the documentation at https://docs.fastlane.tools
-#
-# For a list of all available actions, check out
-#
-#     https://docs.fastlane.tools/actions
-#
-# For a list of all available plugins, check out
-#
-#     https://docs.fastlane.tools/plugins/available-plugins
-#
+# Documentation: https://docs.fastlane.tools
+# Actions:       https://docs.fastlane.tools/actions
+# Plugins:       https://docs.fastlane.tools/plugins/available-plugins
 
-# Uncomment the line if you want fastlane to automatically update itself
+# Uncomment to auto-update fastlane
 # update_fastlane
 
 default_platform(:android)
@@ -18,24 +11,55 @@ default_platform(:android)
 platform :android do
   desc "Build and upload UAT APK"
   lane :uat do
+    increment_version_code(
+      gradle_file_path: "app/build.gradle"
+    )
+
     gradle(
       task: "assemble",
       build_type: "Release",
       flavor: "uat",
       print_command: true
     )
-    # You can integrate Firebase App Distribution, Play Store, or internal tools here
+
+    release_notes = UI.input("Enter the release notes:")
+
+    # Integrate Firebase App Distribution, Play Store, or internal tools here
     # firebase_app_distribution or upload_to_play_store etc.
+    firebase_app_distribution(
+      app: "1:217803854766:android:5ea8f30c972ee95a48ee3f",
+      groups: "internal_tester",
+      release_notes: release_notes,
+      android_artifact_type: "APK",
+      service_credentials_file: "../android/app/src/uat/firebase-service.json",
+      apk_path: "../android/app/build/outputs/apk/uat/release/app-uat-release.apk",
+    )
   end
 
   desc "Build and upload PROD APK"
   lane :prod do
+    increment_version_code(
+      gradle_file_path: "app/build.gradle"
+    )
+
     gradle(
       task: "assemble",
       build_type: "Release",
       flavor: "prod",
       print_command: true
     )
+
+    release_notes = UI.input("Enter the release notes:")
+
+    # Integrate Firebase App Distribution, Play Store, or internal tools here
+    # firebase_app_distribution or upload_to_play_store etc.
+    firebase_app_distribution(
+      app: "1:217803854766:android:dfc9b5288104105448ee3f",
+      groups: "internal_tester",
+      release_notes: release_notes,
+      android_artifact_type: "APK",
+      service_credentials_file: "../android/app/src/prod/firebase-service.json",
+      apk_path: "../android/app/build/outputs/apk/prod/release/app-prod-release.apk",
+    )
   end
 end
-
