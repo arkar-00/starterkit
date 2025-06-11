@@ -34,9 +34,9 @@
 		5BFE785627A96143E8DBCCD9 /* libPods-StarterKit-StarterKitDev.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-StarterKit-StarterKitDev.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		74CC4E30417C05D1F5D8289D /* libPods-StarterKit-StarterKitUat.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-StarterKit-StarterKitUat.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		761780EC2CA45674006654EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = StarterKit/AppDelegate.swift; sourceTree = "<group>"; };
-		81444B2A2DF88E88007847AE /* StarterKitUat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StarterKitUat.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		81444B2A2DF88E88007847AE /* StarterKit UAT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "StarterKit UAT.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		81444B2B2DF88E89007847AE /* StarterKitUat-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "StarterKitUat-Info.plist"; path = "/Users/boss/Documents/Challenge/StarterKit/ios/StarterKitUat-Info.plist"; sourceTree = "<absolute>"; };
-		81444B3C2DF88E95007847AE /* StarterKitDev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StarterKitDev.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		81444B3C2DF88E95007847AE /* StarterKit DEV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "StarterKit DEV.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		81444B3D2DF88E95007847AE /* StarterKitDev-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "StarterKitDev-Info.plist"; path = "/Users/boss/Documents/Challenge/StarterKit/ios/StarterKitDev-Info.plist"; sourceTree = "<absolute>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = StarterKit/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9FC575A9ED3B987338864CFA /* libPods-StarterKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-StarterKit.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -125,8 +125,8 @@
 			isa = PBXGroup;
 			children = (
 				13B07F961A680F5B00A75B9A /* StarterKit.app */,
-				81444B2A2DF88E88007847AE /* StarterKitUat.app */,
-				81444B3C2DF88E95007847AE /* StarterKitDev.app */,
+				81444B2A2DF88E88007847AE /* StarterKit UAT.app */,
+				81444B3C2DF88E95007847AE /* StarterKit DEV.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -168,9 +168,9 @@
 			productReference = 13B07F961A680F5B00A75B9A /* StarterKit.app */;
 			productType = "com.apple.product-type.application";
 		};
-		81444B1A2DF88E88007847AE /* StarterKitUat */ = {
+		81444B1A2DF88E88007847AE /* StarterKit UAT */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 81444B272DF88E88007847AE /* Build configuration list for PBXNativeTarget "StarterKitUat" */;
+			buildConfigurationList = 81444B272DF88E88007847AE /* Build configuration list for PBXNativeTarget "StarterKit UAT" */;
 			buildPhases = (
 				7BE2038F1710D7DA3FBC573E /* [CP] Check Pods Manifest.lock */,
 				81444B1C2DF88E88007847AE /* Sources */,
@@ -184,14 +184,14 @@
 			);
 			dependencies = (
 			);
-			name = StarterKitUat;
+			name = "StarterKit UAT";
 			productName = StarterKit;
-			productReference = 81444B2A2DF88E88007847AE /* StarterKitUat.app */;
+			productReference = 81444B2A2DF88E88007847AE /* StarterKit UAT.app */;
 			productType = "com.apple.product-type.application";
 		};
-		81444B2C2DF88E95007847AE /* StarterKitDev */ = {
+		81444B2C2DF88E95007847AE /* StarterKit DEV */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 81444B392DF88E95007847AE /* Build configuration list for PBXNativeTarget "StarterKitDev" */;
+			buildConfigurationList = 81444B392DF88E95007847AE /* Build configuration list for PBXNativeTarget "StarterKit DEV" */;
 			buildPhases = (
 				CA079CB59DBA684A477C1470 /* [CP] Check Pods Manifest.lock */,
 				81444B2E2DF88E95007847AE /* Sources */,
@@ -205,9 +205,9 @@
 			);
 			dependencies = (
 			);
-			name = StarterKitDev;
+			name = "StarterKit DEV";
 			productName = StarterKit;
-			productReference = 81444B3C2DF88E95007847AE /* StarterKitDev.app */;
+			productReference = 81444B3C2DF88E95007847AE /* StarterKit DEV.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -237,8 +237,8 @@
 			projectRoot = "";
 			targets = (
 				13B07F861A680F5B00A75B9A /* StarterKit */,
-				81444B1A2DF88E88007847AE /* StarterKitUat */,
-				81444B2C2DF88E95007847AE /* StarterKitDev */,
+				81444B1A2DF88E88007847AE /* StarterKit UAT */,
+				81444B2C2DF88E95007847AE /* StarterKit DEV */,
 			);
 		};
 /* End PBXProject section */
@@ -768,10 +768,7 @@
 					"-DFOLLY_CFG_NO_COROUTINES=1",
 					"-DFOLLY_HAVE_CLOCK_GETTIME=1",
 				);
-				OTHER_LDFLAGS = (
-					"$(inherited)",
-					" ",
-				);
+				OTHER_LDFLAGS = "$(inherited)  ";
 				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) DEBUG";
@@ -840,10 +837,7 @@
 					"-DFOLLY_CFG_NO_COROUTINES=1",
 					"-DFOLLY_HAVE_CLOCK_GETTIME=1",
 				);
-				OTHER_LDFLAGS = (
-					"$(inherited)",
-					" ",
-				);
+				OTHER_LDFLAGS = "$(inherited)  ";
 				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
 				SDKROOT = iphoneos;
 				USE_HERMES = true;
@@ -863,7 +857,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		81444B272DF88E88007847AE /* Build configuration list for PBXNativeTarget "StarterKitUat" */ = {
+		81444B272DF88E88007847AE /* Build configuration list for PBXNativeTarget "StarterKit UAT" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				81444B282DF88E88007847AE /* Debug */,
@@ -872,7 +866,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		81444B392DF88E95007847AE /* Build configuration list for PBXNativeTarget "StarterKitDev" */ = {
+		81444B392DF88E95007847AE /* Build configuration list for PBXNativeTarget "StarterKit DEV" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				81444B3A2DF88E95007847AE /* Debug */,

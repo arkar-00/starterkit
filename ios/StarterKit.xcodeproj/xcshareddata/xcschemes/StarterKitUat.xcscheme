@@ -63,8 +63,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "81444B1A2DF88E88007847AE"
-            BuildableName = "StarterKitUat.app"
-            BlueprintName = "StarterKitUat"
+            BuildableName = "StarterKit UAT.app"
+            BlueprintName = "StarterKit UAT"
             ReferencedContainer = "container:StarterKit.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
