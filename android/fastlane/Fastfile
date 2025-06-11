@@ -1,0 +1,41 @@
+# This file contains the fastlane.tools configuration
+# You can find the documentation at https://docs.fastlane.tools
+#
+# For a list of all available actions, check out
+#
+#     https://docs.fastlane.tools/actions
+#
+# For a list of all available plugins, check out
+#
+#     https://docs.fastlane.tools/plugins/available-plugins
+#
+
+# Uncomment the line if you want fastlane to automatically update itself
+# update_fastlane
+
+default_platform(:android)
+
+platform :android do
+  desc "Build and upload UAT APK"
+  lane :uat do
+    gradle(
+      task: "assemble",
+      build_type: "Release",
+      flavor: "uat",
+      print_command: true
+    )
+    # You can integrate Firebase App Distribution, Play Store, or internal tools here
+    # firebase_app_distribution or upload_to_play_store etc.
+  end
+
+  desc "Build and upload PROD APK"
+  lane :prod do
+    gradle(
+      task: "assemble",
+      build_type: "Release",
+      flavor: "prod",
+      print_command: true
+    )
+  end
+end
+
