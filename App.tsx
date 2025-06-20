@@ -6,22 +6,16 @@
  */
 
 import React from 'react';
-import type {PropsWithChildren} from 'react';
-import {
-  ScrollView,
-  StatusBar,
-  StyleSheet,
-  Text,
-  useColorScheme,
-  View,
-} from 'react-native';
-import Config from 'react-native-config';
+import {Button, View} from 'react-native';
+import Card from './src/components/Card';
+import useCounter from './src/hooks/useCounter';
 
 function App(): React.JSX.Element {
-  console.log('Config object:', Config.ENV);
+  const {count, increment} = useCounter();
   return (
     <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
-      <Text>Environment: {Config.ENV}</Text>
+      <Card title="Counter Card" content={`count: ${count}`} />
+      <Button title="Like" onPress={increment} />
     </View>
   );
 }

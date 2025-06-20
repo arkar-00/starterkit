@@ -34,7 +34,7 @@ android {
         applicationId "com.starterkit"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
-        versionCode 7
+        versionCode 8
         versionName "1.0"
         resValue "string", "build_config_package", "com.starterkit"
     }
